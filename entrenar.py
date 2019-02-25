@@ -21,7 +21,7 @@ epocas=20
 longitud, altura = 150, 150
 batch_size = 32
 pasos = 1000
-validation_steps = 300
+validacion_pasos = 300
 filtrosConv1 = 32
 filtrosConv2 = 64
 tamano_filtro1 = (3, 3)
@@ -77,7 +77,7 @@ cnn.fit_generator(
     steps_per_epoch=pasos,
     epochs=epocas,
     validation_data=validacion_generador,
-    validation_steps=validation_steps)
+    validation_steps=validacion_pasos)
 
 target_dir = './modelo/'
 if not os.path.exists(target_dir):
